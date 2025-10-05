@@ -7,16 +7,14 @@ mod smh_registry {
 
     #[ink(event)]
     pub struct DomainRegistered {
+        pub domain: String,
         #[ink(topic)]
-        domain: String,
-        #[ink(topic)]
-        contract_address: AccountId,
+        pub contract_address: AccountId,
     }
 
     #[ink(event)]
     pub struct DomainExtentionCreated {
-        #[ink(topic)]
-        extention: String,
+        pub extention: String,
     }
 
     #[ink(storage)]
